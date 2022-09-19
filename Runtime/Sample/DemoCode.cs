@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,16 +18,16 @@ namespace ChemicalX.Core
 
         private void Start()
         {
-            // ºôµå Å¸ÀÔ µğ¹ö±×·Î ¼³Á¤
+            // ë¹Œë“œ íƒ€ì… ë””ë²„ê·¸ë¡œ ì„¤ì •
             GlobalSetting.BUILDTYPE = BuildType.Debug;
 
-            // µ¥¸ğ¿ë Å×½ºÆ® µ¥ÀÌÅÍ »ı¼ºÄÚµå ½ÇÇà
+            // ë°ëª¨ìš© í…ŒìŠ¤íŠ¸ ë°ì´í„° ìƒì„±ì½”ë“œ ì‹¤í–‰
             DemoRunner.Instance.Run();
         }
 
         private void OnDestroy()
         {
-            // Á¾·á½Ã ºñµ¿±â ÄÚµå µ¿ÀÛ Á¤Áö
+            // ì¢…ë£Œì‹œ ë¹„ë™ê¸° ì½”ë“œ ë™ì‘ ì •ì§€
             DemoRunner.Instance.Destroy();
         }
 
@@ -36,25 +36,25 @@ namespace ChemicalX.Core
         {
             if (bDebugEEG)
             {
-                // 1. EEG µ¥ÀÌÅÍ Ãâ·Â
+                // 1. EEG ë°ì´í„° ì¶œë ¥
                 PrintEEG(BrainAPI.CurrentEEG);
             }
 
             if (bDebugStrongestEEGPart)
             {
-                // 2. Strongest EEG part µ¥ÀÌÅÍ Ãâ·Â
+                // 2. Strongest EEG part ë°ì´í„° ì¶œë ¥
                 PrintStrongestEEGPart(BrainAPI.StrongestEEGPart);
             }
 
             if (bDebugDeviceNoises)
             {
-                // 3. Device noises Ãâ·Â
+                // 3. Device noises ì¶œë ¥
                 PrintDeviceNoises(BrainAPI.DeviceNoises);
             }
 
             if (bDebugIsDeviceEquipped)
             {
-                // 4. Equip status Ãâ·Â
+                // 4. Equip status ì¶œë ¥
                 PrintEquipStatus(BrainAPI.IsDeciveEquipped);
             }
         }
