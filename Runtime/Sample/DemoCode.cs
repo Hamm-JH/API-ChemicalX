@@ -9,6 +9,9 @@ using ChemicalX.Core.Brain;
 
 namespace ChemicalX.Core
 {
+    /// <summary>
+    /// ★★★ 패키지 내부코드 바꿔도 업데이트때 리셋될 수 있으니 참고용으로 확인만 해주시면 됩니다.
+    /// </summary>
     public partial class DemoCode : MonoBehaviour
     {
         public bool bDebugEEG;
@@ -18,19 +21,19 @@ namespace ChemicalX.Core
 
         private void Start()
         {
-            // 빌드 타입 디버그로 설정
+            // Start 1. 빌드 타입 디버그로 설정
             GlobalSetting.BUILDTYPE = BuildType.Debug;
 
-            // 데모용 테스트 데이터 생성코드 실행
+            // Start 2. 데모용 테스트 데이터 생성코드 실행
             DemoRunner.Instance.Run();
         }
 
         private void OnDestroy()
         {
-            // 종료시 비동기 코드 동작 정지
+            // End. 종료시 비동기 코드 동작 정지
             DemoRunner.Instance.Destroy();
         }
-
+        
         // Update is called once per frame
         void Update()
         {
