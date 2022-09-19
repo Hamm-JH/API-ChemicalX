@@ -1,8 +1,8 @@
 {
-    "name": "com.hammjh.apichemicalx",
+    "name": "com.hammjh.APIchemicalx",
     "version": "0.1.1",
     "displayName": "API chemicalX",
-    "description": "api chemicalX package",
+    "description": "API chemicalX package\n Hello",
     "unity": "2021.3",
     "author": {
         "name": "hammJH",
