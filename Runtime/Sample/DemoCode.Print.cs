@@ -17,15 +17,17 @@ namespace ChemicalX.Core
         /// <param name="data"></param>
         void PrintEEG(List<EEG> data)
         {
-            Debug.Log("");
+            int count = 1;
+            Debug.Log("----------------------------");
             Debug.Log("EEG");
             foreach (EEG e in data)
             {
-                Debug.Log("EEG Data");
+                Debug.Log($"player {count++} EEG Data");
                 for (int i = 0; i < e.Data.Count; i++)
                 {
                     Debug.Log($"{i} : {e.Data[i]}");
                 }
+                Debug.Log("----------------------------");
             }
         }
 
@@ -35,7 +37,7 @@ namespace ChemicalX.Core
         /// <param name="data"></param>
         void PrintStrongestEEGPart(List<EEGType> data)
         {
-            Debug.Log("");
+            Debug.Log("----------------------------");
             Debug.Log("Strongest eeg part");
             for (int i = 0; i < data.Count; i++)
             {
@@ -49,7 +51,7 @@ namespace ChemicalX.Core
         /// <param name="data"></param>
         void PrintDeviceNoises(List<int> data)
         {
-            Debug.Log("");
+            Debug.Log("----------------------------");
             Debug.Log("Device noises");
             for (int i = 0; i < data.Count; i++)
             {
@@ -63,7 +65,7 @@ namespace ChemicalX.Core
         /// <param name="data"></param>
         void PrintEquipStatus(List<bool> data)
         {
-            Debug.Log("");
+            Debug.Log("----------------------------");
             Debug.Log("Equip status");
             for (int i = 0; i < data.Count; i++)
             {

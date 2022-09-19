@@ -20,7 +20,7 @@ namespace ChemicalX.Core
 
             while(bIsRunning)
             {
-                Debug.Log("Hello Noise");
+                //Debug.Log("Hello Noise");
                 SetDeviceNoise(0, rand);
                 SetDeviceNoise(1, rand);
 
