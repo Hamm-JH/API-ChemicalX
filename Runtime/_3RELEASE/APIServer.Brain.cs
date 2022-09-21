@@ -106,6 +106,12 @@ namespace ChemicalX.Core
 
             SetStrongestEEGIndex(0);
             SetStrongestEEGIndex(1);
+
+            SetDeviceNoise(data.data1, 0);
+            SetDeviceNoise(data.data2, 1);
+
+            SetEquipStatus(0);
+            SetEquipStatus(1);
         }
 
         #region Set EEG data
