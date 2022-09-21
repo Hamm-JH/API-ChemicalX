@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -10,7 +10,7 @@ namespace ChemicalX.Core
         #region Create Device Noise / Equip status
 
         /// <summary>
-        /// ºñµ¿±â Àåºñ µ¥ÀÌÅÍ ¼öÁı »óÅÂ µ¥ÀÌÅÍ »ı¼º
+        /// ë¹„ë™ê¸° ì¥ë¹„ ë°ì´í„° ìˆ˜ì§‘ ìƒíƒœ ë°ì´í„° ìƒì„±
         /// </summary>
         async void CreateCurrentNoiseLevel()
         {
@@ -35,7 +35,7 @@ namespace ChemicalX.Core
         }
 
         /// <summary>
-        /// ³ëÀÌÁî º¯¼ö »ı¼º
+        /// ë…¸ì´ì¦ˆ ë³€ìˆ˜ ìƒì„±
         /// </summary>
         void InitNoiseValues()
         {
@@ -53,7 +53,7 @@ namespace ChemicalX.Core
         #region Set device noise
 
         /// <summary>
-        /// Àåºñ ³ëÀÌÁî ·¹º§ ÇÒ´ç
+        /// ì¥ë¹„ ë…¸ì´ì¦ˆ ë ˆë²¨ í• ë‹¹
         /// </summary>
         /// <param name="index"></param>
         /// <param name="rand"></param>
@@ -67,7 +67,7 @@ namespace ChemicalX.Core
         #region Set equip status
 
         /// <summary>
-        /// Àåºñ ÀÔ·Â»óÅÂ ÇÒ´ç
+        /// ì¥ë¹„ ì…ë ¥ìƒíƒœ í• ë‹¹
         /// </summary>
         /// <param name="index"></param>
         void SetEquipStatus(int index)

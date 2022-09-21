@@ -13,7 +13,7 @@ namespace ChemicalX.Core.API
                 if (GlobalSetting.BUILDTYPE == BuildType.Release)
                 {
                     // TODO Release로 변경
-                    return DemoRunner.Instance.EEGData;
+                    return APIServer.Instance.EEGData;
                 }
                 else
                 {
@@ -29,7 +29,7 @@ namespace ChemicalX.Core.API
                 if (GlobalSetting.BUILDTYPE == BuildType.Release)
                 {
                     // TODO Release로 변경
-                    return DemoRunner.Instance.StrongestEEGIndex;
+                    return APIServer.Instance.StrongestEEGIndex;
                 }
                 else
                 {
@@ -44,7 +44,7 @@ namespace ChemicalX.Core.API
             {
                 if (GlobalSetting.BUILDTYPE == BuildType.Release)
                 {
-                    return DemoRunner.Instance.bEquipStatus;
+                    return APIServer.Instance.bEquipStatus;
                 }
                 else
                 {
@@ -59,7 +59,7 @@ namespace ChemicalX.Core.API
             {
                 if (GlobalSetting.BUILDTYPE == BuildType.Release)
                 {
-                    return DemoRunner.Instance.noiseLevel;
+                    return APIServer.Instance.noiseLevel;
                 }
                 else
                 {

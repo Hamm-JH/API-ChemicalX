@@ -14,6 +14,8 @@ namespace ChemicalX.Core
     /// </summary>
     public partial class DemoCode : MonoBehaviour
     {
+        public BuildType buildType;
+
         public bool bDebugEEG;
         public bool bDebugStrongestEEGPart;
         public bool bDebugDeviceNoises;
@@ -22,16 +24,25 @@ namespace ChemicalX.Core
         private void Start()
         {
             // Start 1. 빌드 타입 디버그로 설정
-            GlobalSetting.BUILDTYPE = BuildType.Debug;
+            GlobalSetting.BUILDTYPE = buildType;
 
-            // Start 2. 데모용 테스트 데이터 생성코드 실행
-            DemoRunner.Instance.Run();
+            if (buildType == BuildType.Debug)
+            {
+                // Start 2. 데모용 테스트 데이터 생성코드 실행
+                DemoRunner.Instance.Run();
+            }
+            // BuildType.Release
+            else
+            {
+                APIServer.Instance.Run();
+            }
         }
 
         private void OnDestroy()
         {
             // End. 종료시 비동기 코드 동작 정지
             DemoRunner.Instance.Destroy();
+            APIServer.Instance.Destroy();
         }
         
         // Update is called once per frame

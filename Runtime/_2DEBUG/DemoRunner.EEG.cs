@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -6,14 +6,14 @@ using UnityEngine;
 namespace ChemicalX.Core
 {
     /// <summary>
-    /// µ¥¸ğ µ¥ÀÌÅÍ »ı¼º Å¬·¡½º
+    /// ë°ëª¨ ë°ì´í„° ìƒì„± í´ë˜ìŠ¤
     /// </summary>
     public partial class DemoRunner
     {
         #region Create EEG data / Strongest EEG part
 
         /// <summary>
-        /// ºñµ¿±â EEG µ¥ÀÌÅÍ »ı¼º
+        /// ë¹„ë™ê¸° EEG ë°ì´í„° ìƒì„±
         /// </summary>
         async void CreateCurrentEEG()
         {
@@ -50,7 +50,7 @@ namespace ChemicalX.Core
         }
 
         /// <summary>
-        /// ´ÜÀÏ EEG µ¥ÀÌÅÍ ÃÊ±âÈ­
+        /// ë‹¨ì¼ EEG ë°ì´í„° ì´ˆê¸°í™”
         /// </summary>
         /// <returns></returns>
         public EEG InitSingleEEGData()
@@ -70,7 +70,7 @@ namespace ChemicalX.Core
         #region Set EEG data
 
         /// <summary>
-        /// ´ÜÀÏ EEG µ¥ÀÌÅÍ ÇÒ´ç
+        /// ë‹¨ì¼ EEG ë°ì´í„° í• ë‹¹
         /// </summary>
         /// <param name="data"></param>
         /// <param name="rand"></param>
@@ -101,7 +101,7 @@ namespace ChemicalX.Core
         #region Set Strongest EEG Part
 
         /// <summary>
-        /// EEG ÇÒ´ç½Ã¸¶´Ù Á¦ÀÏ °­ÇÑ EEGIndex¸¦ ±¸ÇÑ´Ù.
+        /// EEG í• ë‹¹ì‹œë§ˆë‹¤ ì œì¼ ê°•í•œ EEGIndexë¥¼ êµ¬í•œë‹¤.
         /// </summary>
         /// <param name="data"></param>
         /// <param name="playerIndex"></param>

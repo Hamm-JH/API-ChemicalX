@@ -1,3 +1,4 @@
+癤퓎sing ChemicalX.Core.Brain;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
@@ -6,7 +7,7 @@ using UnityEngine;
 
 namespace ChemicalX.Core
 {
-    public partial class DemoRunner
+    public partial class DemoRunner : IBrain
     {
         #region Values
         private static DemoRunner instance;
@@ -23,27 +24,15 @@ namespace ChemicalX.Core
             }
         }
 
-        bool bIsRunning;
+        public bool bIsRunning { get; set; }
 
-        /// <summary>
-        /// EEG 데이터
-        /// </summary>
-        public List<EEG> EEGData;
+        public List<EEG> EEGData { get; set; }
 
-        /// <summary>
-        /// 가장 강한 EEG index
-        /// </summary>
-        public List<Brain.EEGType> StrongestEEGIndex;
+        public List<EEGType> StrongestEEGIndex { get; set; }
 
-        /// <summary>
-        /// 장비 착용 상태
-        /// </summary>
-        public List<bool> bEquipStatus;
+        public List<bool> bEquipStatus { get; set; }
 
-        /// <summary>
-        /// 장비 노이즈 레벨
-        /// </summary>
-        public List<int> noiseLevel;
+        public List<int> noiseLevel { get; set; }
 
         #endregion
 
