@@ -345,3 +345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dee0283fa74a0274a99bd14d218b123d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildType: 1
+  bDebugEEG: 0
+  bDebugStrongestEEGPart: 0
+  bDebugDeviceNoises: 0
+  bDebugIsDeviceEquipped: 0

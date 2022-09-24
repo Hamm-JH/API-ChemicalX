@@ -8,5 +8,12 @@
         "name": "hammJH",
         "email": "rimmoyee@gmail.com",
         "url": ""
-    }
+    },
+    "samples": [
+        {
+            "displayName": "Brain API Demo",
+            "description": "API for Brain data input",
+            "path": "Runtime/Sample"
+        }
+    ]
 }

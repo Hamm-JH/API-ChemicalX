@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +12,7 @@ namespace ChemicalX.Core
     public partial class DemoCode : MonoBehaviour
     {
         /// <summary>
-        /// EEG µ¥ÀÌÅÍ Ãâ·Â
+        /// EEG ë°ì´í„° ì¶œë ¥
         /// </summary>
         /// <param name="data"></param>
         void PrintEEG(List<EEG> data)
@@ -32,7 +32,7 @@ namespace ChemicalX.Core
         }
 
         /// <summary>
-        /// StrongestEEGPart Ãâ·Â
+        /// StrongestEEGPart ì¶œë ¥
         /// </summary>
         /// <param name="data"></param>
         void PrintStrongestEEGPart(List<EEGType> data)
@@ -46,7 +46,7 @@ namespace ChemicalX.Core
         }
 
         /// <summary>
-        /// Àåºñ ³ëÀÌÁî Ãâ·Â
+        /// ì¥ë¹„ ë…¸ì´ì¦ˆ ì¶œë ¥
         /// </summary>
         /// <param name="data"></param>
         void PrintDeviceNoises(List<int> data)
@@ -60,7 +60,7 @@ namespace ChemicalX.Core
         }
 
         /// <summary>
-        /// Àåºñ Âø¿ë»óÅÂ Ãâ·Â
+        /// ì¥ë¹„ ì°©ìš©ìƒíƒœ ì¶œë ¥
         /// </summary>
         /// <param name="data"></param>
         void PrintEquipStatus(List<bool> data)
