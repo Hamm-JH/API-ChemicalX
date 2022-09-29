@@ -93,7 +93,7 @@ namespace ChemicalX.Core
         /// <param name="index"></param>
         void SetEquipStatus(int index)
         {
-            bEquipStatus[index] = noiseLevel[index] <= 80 ? true : false;
+            bEquipStatus[index] = noiseLevel[index] < 80 ? true : false;
         }
 
         #endregion
