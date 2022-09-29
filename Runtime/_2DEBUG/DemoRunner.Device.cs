@@ -18,11 +18,11 @@ namespace ChemicalX.Core
 
             System.Random rand = new System.Random();
 
-            while(bIsRunning)
+            while (bIsRunning)
             {
                 //Debug.Log("Hello Noise");
-                SetDeviceNoise(0, rand);
-                SetDeviceNoise(1, rand);
+                SetDeviceNoise(0, GlobalSetting.Player1EquipStatus, rand);
+                SetDeviceNoise(1, GlobalSetting.Player1EquipStatus, rand);
 
                 SetEquipStatus(0);
                 SetEquipStatus(1);
@@ -57,9 +57,30 @@ namespace ChemicalX.Core
         /// </summary>
         /// <param name="index"></param>
         /// <param name="rand"></param>
-        void SetDeviceNoise(int index, System.Random rand)
+        void SetDeviceNoise(int index, EquipStatus status, System.Random rand)
         {
-            noiseLevel[index] = rand.Next(201);
+            switch (status)
+            {
+                case EquipStatus.ALLRandom:
+                    noiseLevel[index] = rand.Next(201) / 2;
+                    break;
+
+                case EquipStatus.StaticEquipped:
+                    noiseLevel[index] = 0;
+                    break;
+
+                case EquipStatus.RandomEquipped:
+                    noiseLevel[index] = rand.Next(161) / 2;
+                    break;
+
+                case EquipStatus.StaticNotEquipped:
+                    noiseLevel[index] = 200 / 2;
+                    break;
+
+                case EquipStatus.RandomNotEquipped:
+                    noiseLevel[index] = (160 + rand.Next(41)) / 2;
+                    break;
+            }
         }
 
         #endregion
@@ -72,7 +93,7 @@ namespace ChemicalX.Core
         /// <param name="index"></param>
         void SetEquipStatus(int index)
         {
-            bEquipStatus[index] = noiseLevel[index] / 2 < 80 ? true : false;
+            bEquipStatus[index] = noiseLevel[index] <= 80 ? true : false;
         }
 
         #endregion

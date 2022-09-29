@@ -10,6 +10,20 @@ namespace ChemicalX.Core
         Release
     }
 
+    public enum EquipStatus
+    {
+        NULL = -1,
+
+        /// <summary>
+        /// 착용 상태, 노이즈 상태를 넘나드는 난수값
+        /// </summary>
+        ALLRandom,
+        StaticEquipped,
+        RandomEquipped,
+        StaticNotEquipped,
+        RandomNotEquipped,
+    }
+
     namespace Brain
     {
         public enum EEGType

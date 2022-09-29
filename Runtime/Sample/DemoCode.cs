@@ -15,6 +15,8 @@ namespace ChemicalX.Core
     public partial class DemoCode : MonoBehaviour
     {
         public BuildType buildType;
+        public EquipStatus p1EquipStatus;
+        public EquipStatus p2EquipStatus;
 
         public bool bDebugEEG;
         public bool bDebugStrongestEEGPart;
@@ -25,6 +27,8 @@ namespace ChemicalX.Core
         {
             // Start 1. 빌드 타입 디버그로 설정
             GlobalSetting.BUILDTYPE = buildType;
+            GlobalSetting.Player1EquipStatus = p1EquipStatus;
+            GlobalSetting.Player2EquipStatus = p2EquipStatus;
 
             if (buildType == BuildType.Debug)
             {
@@ -44,7 +48,14 @@ namespace ChemicalX.Core
             DemoRunner.Instance.Destroy();
             APIServer.Instance.Destroy();
         }
-        
+
+        private void OnValidate()
+        {
+            GlobalSetting.BUILDTYPE = buildType;
+            GlobalSetting.Player1EquipStatus = p1EquipStatus;
+            GlobalSetting.Player2EquipStatus = p2EquipStatus;
+        }
+
         // Update is called once per frame
         void Update()
         {
