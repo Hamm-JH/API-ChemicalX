@@ -22,7 +22,7 @@ namespace ChemicalX.Core
             {
                 //Debug.Log("Hello Noise");
                 SetDeviceNoise(0, GlobalSetting.Player1EquipStatus, rand);
-                SetDeviceNoise(1, GlobalSetting.Player1EquipStatus, rand);
+                SetDeviceNoise(1, GlobalSetting.Player2EquipStatus, rand);
 
                 SetEquipStatus(0);
                 SetEquipStatus(1);
