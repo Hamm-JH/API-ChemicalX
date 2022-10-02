@@ -15,7 +15,14 @@ namespace ChemicalX.Core.API
         {
             get
             {
-                return true;
+                if (GlobalSetting.BUILDTYPE == BuildType.Release)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
             }
         }
 
@@ -27,7 +34,14 @@ namespace ChemicalX.Core.API
         {
             get
             {
-                return 0;
+                if (GlobalSetting.BUILDTYPE == BuildType.Release)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return 1;
+                }
                 //return 1;
             }
         }
@@ -40,7 +54,14 @@ namespace ChemicalX.Core.API
         {
             get
             {
-                return 1; // 1m
+                if (GlobalSetting.BUILDTYPE == BuildType.Release)
+                {
+                    return 1; // 1m
+                }
+                else
+                {
+                    return 1.5f;
+                }
             }
         }
 

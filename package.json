@@ -13,7 +13,12 @@
         {
             "displayName": "Brain API Demo",
             "description": "API for Brain data input",
-            "path": "Runtime/Sample"
+            "path": "Runtime/Sample/Brain"
+        },
+        {
+            "displayName": "Vision API Demo",
+            "description": "API for Vision data input",
+            "path": "Runtime/Sample/Vision"
         }
     ]
 }
