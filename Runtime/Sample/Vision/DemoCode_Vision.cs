@@ -12,6 +12,24 @@ namespace ChemicalX.Core
     {
         public BuildType buildType;
 
+        [Header("Demo")]
+        /// <summary>
+        /// 데모 데이터 조작용 열거변수
+        /// </summary>
+        public ContactStatus contactStatus;
+
+        /// <summary>
+        /// 감지거리 최대 경계값 (contactBoundary보다 작으면 에러발생)
+        /// </summary>
+        [Range(2, 10)]
+        public int maxDistanceRandomRange;
+
+        /// <summary>
+        /// 접촉 판단 경계값 (maxDistanceRandomRange보다 크면 에러발생)
+        /// </summary>
+        public float contactBoundary;
+
+        [Header("Debug")]
         public bool bDebugIsContacted;
         public bool bDebugContactedAreaRatio;
         public bool bDebugContactedUserDistance;
@@ -20,11 +38,26 @@ namespace ChemicalX.Core
         void Start()
         {
             GlobalSetting.BUILDTYPE = buildType;
+            GlobalSetting.VisionContactStatus = contactStatus;
+            GlobalSetting.MaxDistanceRandomRange = maxDistanceRandomRange;
+            GlobalSetting.ContactBoundary = contactBoundary;
+
+            if (buildType == BuildType.Debug)
+            {
+                DemoRunner_Vision.Instance.Run();
+            }
+            else
+            {
+                APIServer.Instance.Run();
+            }
         }
 
         private void OnValidate()
         {
             GlobalSetting.BUILDTYPE = buildType;
+            GlobalSetting.VisionContactStatus = contactStatus;
+            GlobalSetting.MaxDistanceRandomRange = maxDistanceRandomRange;
+            GlobalSetting.ContactBoundary = contactBoundary;
         }
 
         // Update is called once per frame
@@ -47,6 +80,12 @@ namespace ChemicalX.Core
                 // 3. 두 사람의 거리 확인
                 PrintContactedUsersDistance(VisionAPI.ContactedUsersDistance);
             }
+        }
+
+        private void OnDestroy()
+        {
+            DemoRunner_Vision.Instance.Destroy();
+            APIServer.Instance.Destroy();
         }
     }
 }

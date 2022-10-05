@@ -167,7 +167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0738d0741f38c40bd0e32a0f3075a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildType: 0
+  buildType: 1
+  contactStatus: 0
+  maxDistanceRandomRange: 10
+  contactBoundary: 1.5
   bDebugIsContacted: 0
   bDebugContactedAreaRatio: 0
   bDebugContactedUserDistance: 0

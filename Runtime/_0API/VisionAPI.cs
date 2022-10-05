@@ -17,11 +17,11 @@ namespace ChemicalX.Core.API
             {
                 if (GlobalSetting.BUILDTYPE == BuildType.Release)
                 {
-                    return false;
+                    return APIServer.Instance.IsContacted;
                 }
                 else
                 {
-                    return true;
+                    return DemoRunner_Vision.Instance.bIsContacted;
                 }
             }
         }
@@ -36,11 +36,11 @@ namespace ChemicalX.Core.API
             {
                 if (GlobalSetting.BUILDTYPE == BuildType.Release)
                 {
-                    return 0;
+                    return APIServer.Instance.ContactedAreaRatio;
                 }
                 else
                 {
-                    return 1;
+                    return DemoRunner_Vision.Instance.ContactedArea;
                 }
                 //return 1;
             }
@@ -56,11 +56,11 @@ namespace ChemicalX.Core.API
             {
                 if (GlobalSetting.BUILDTYPE == BuildType.Release)
                 {
-                    return 1; // 1m
+                    return APIServer.Instance.ContactedUsersDistance;
                 }
                 else
                 {
-                    return 1.5f;
+                    return DemoRunner_Vision.Instance.ContactedDistance;
                 }
             }
         }

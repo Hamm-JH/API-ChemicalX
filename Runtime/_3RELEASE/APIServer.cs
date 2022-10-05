@@ -37,6 +37,16 @@ namespace ChemicalX.Core
 
         #endregion
 
+        #region Vision API
+
+        public bool IsContacted { get; set; }
+
+        public float ContactedAreaRatio { get; set; }
+
+        public float ContactedUsersDistance { get; set; }
+
+        #endregion
+
         #endregion
 
         public async void Run()
@@ -44,9 +54,12 @@ namespace ChemicalX.Core
             bIsRunning = true;
 
             CreateDataset();
+            CreateVisionDataset();
 
             RequestBrainData();
+            RequestVisionData();
         }
+
 
         public void Destroy()
         {
@@ -77,6 +90,13 @@ namespace ChemicalX.Core
             noiseLevel = new List<int>();
             noiseLevel.Add(0);
             noiseLevel.Add(0);
+        }
+
+        private void CreateVisionDataset()
+        {
+            IsContacted = false;
+            ContactedAreaRatio = 0;
+            ContactedUsersDistance = 0;
         }
     }
 }

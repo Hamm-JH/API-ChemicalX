@@ -153,34 +153,5 @@ namespace ChemicalX.Core
 
 
         #endregion
-
-        //HttpWebRequest webReq;
-
-        //void StartWebRequest()
-        //{
-        //    webReq.BeginGetResponse(new System.AsyncCallback(FinishWebRequest), null);
-        //}
-
-        //void FinishWebRequest(IAsyncResult result)
-        //{
-        //    result.
-        //}
-
-        //async void GetRequest(string uri)
-        //{
-        //    using (UnityWebRequest req = UnityWebRequest.Get(uri))
-        //    {
-        //        await Task.Run(req.SendWebRequest);
-
-        //        if (req.result == UnityWebRequest.Result.Success)
-        //        {
-        //            Debug.Log($"success. received : {req.downloadHandler.text}");
-        //        }
-        //        else
-        //        {
-        //            Debug.Log($"error : {req.result.ToString()}");
-        //        }
-        //    }
-        //}
     }
 }

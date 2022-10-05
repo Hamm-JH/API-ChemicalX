@@ -24,6 +24,22 @@ namespace ChemicalX.Core
         RandomNotEquipped,
     }
 
+    public enum ContactStatus
+    {
+        NULL = -1,
+        
+        /// <summary>
+        /// 접근 상태 랜덤 적용
+        /// </summary>
+        ALLRandom,
+
+        StaticContacted,
+        RandomContacted,
+        StaticNotContacted,
+        RandomNotContacted,
+
+    }
+
     namespace Brain
     {
         public enum EEGType
