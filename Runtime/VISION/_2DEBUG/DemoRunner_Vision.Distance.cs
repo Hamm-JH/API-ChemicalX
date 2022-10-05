@@ -63,7 +63,7 @@ namespace ChemicalX.Core
                     ContactedDistance = GlobalSetting.ContactBoundary;
                     break;
             }
-            Debug.Log(ContactedDistance);
+            //Debug.Log(ContactedDistance);
 
         }
 
