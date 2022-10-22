@@ -12,6 +12,8 @@ namespace ChemicalX.Core
     {
         public BuildType buildType;
 
+        // public private releaseURL;
+
         [Header("Demo")]
         /// <summary>
         /// 데모 데이터 조작용 열거변수
@@ -30,6 +32,7 @@ namespace ChemicalX.Core
         public float contactBoundary;
 
         [Header("Debug")]
+        private string currentAPI = GlobalSetting.visionReleaseAPI;
         public bool bDebugIsContacted;
         public bool bDebugContactedAreaRatio;
         public bool bDebugContactedUserDistance;
@@ -41,6 +44,7 @@ namespace ChemicalX.Core
             GlobalSetting.VisionContactStatus = contactStatus;
             GlobalSetting.MaxDistanceRandomRange = maxDistanceRandomRange;
             GlobalSetting.ContactBoundary = contactBoundary;
+            currentAPI = GlobalSetting.visionReleaseAPI;
 
             if (buildType == BuildType.Debug)
             {
@@ -58,6 +62,7 @@ namespace ChemicalX.Core
             GlobalSetting.VisionContactStatus = contactStatus;
             GlobalSetting.MaxDistanceRandomRange = maxDistanceRandomRange;
             GlobalSetting.ContactBoundary = contactBoundary;
+            currentAPI = GlobalSetting.visionReleaseAPI;
         }
 
         // Update is called once per frame

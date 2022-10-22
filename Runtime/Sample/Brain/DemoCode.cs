@@ -18,6 +18,8 @@ namespace ChemicalX.Core
         public EquipStatus p1EquipStatus;
         public EquipStatus p2EquipStatus;
 
+        [Header("Debug")]
+        private string currentAPI;
         public bool bDebugEEG;
         public bool bDebugStrongestEEGPart;
         public bool bDebugDeviceNoises;
@@ -29,6 +31,7 @@ namespace ChemicalX.Core
             GlobalSetting.BUILDTYPE = buildType;
             GlobalSetting.Player1EquipStatus = p1EquipStatus;
             GlobalSetting.Player2EquipStatus = p2EquipStatus;
+            currentAPI = GlobalSetting.brainReleaseAPI;
 
             if (buildType == BuildType.Debug)
             {
@@ -54,6 +57,7 @@ namespace ChemicalX.Core
             GlobalSetting.BUILDTYPE = buildType;
             GlobalSetting.Player1EquipStatus = p1EquipStatus;
             GlobalSetting.Player2EquipStatus = p2EquipStatus;
+            currentAPI = GlobalSetting.brainReleaseAPI;
         }
 
         // Update is called once per frame

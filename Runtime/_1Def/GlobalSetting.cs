@@ -10,13 +10,18 @@ namespace ChemicalX.Core
         public static EquipStatus Player1EquipStatus = EquipStatus.NULL;
         public static EquipStatus Player2EquipStatus = EquipStatus.NULL;
 
+        public static string brainReleaseAPI = "http://192.168.10.11:3002/BCIOut";  // Local brain api
+        // string targetUri = "http://dudoWeb.iptime.org:50200/BCIOut"; // ì›ê²© brain api
+        public static string visionReleaseAPI = "http://192.168.10.11:3002/VISIONOUT"; // Local vision api
+        // public static string visionReleaseAPI = "http://dudoWeb.iptime.org:50200/VISIONOUT"  // ì›ê²© vision api
+
         /// <summary>
-        /// (int) ºñÀü µ¥¸ğ µ¥ÀÌÅÍ »ı¼º½Ã Á¢±Ù µ¥ÀÌÅÍ ÃÖ´ë°Å¸®°ª
+        /// (int) ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½Å¸ï¿½ï¿½ï¿½
         /// </summary>
         public static int MaxDistanceRandomRange = 10;
 
         /// <summary>
-        /// Á¢±Ù ÆÇÁ¤ °æ°è
+        /// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         /// </summary>
         public static float ContactBoundary = 1.5f;
 

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using ChemicalX.Core;
 
 namespace ChemicalX.Core
 {
@@ -12,7 +13,9 @@ namespace ChemicalX.Core
     {
         internal async void RequestVisionData()
         {
-            string targetUri = "http://dudoWeb.iptime.org:50200/VISIONOUT";
+            // GlobalSetting.visionReleaseAPI
+            // ChemicalX.Core.GlobalSetting.visionReleaseAPI
+            string targetUri = GlobalSetting.visionReleaseAPI;
 
             while(bIsRunning)
             {

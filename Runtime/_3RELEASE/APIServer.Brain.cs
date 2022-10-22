@@ -56,7 +56,8 @@ namespace ChemicalX.Core
         {
             //UnityWebRequest req = new UnityWebRequest("192.168.10.11:3002/CON");
 
-            string targetUri = "http://dudoWeb.iptime.org:50200/BCIOut";
+            string targetUri = GlobalSetting.brainReleaseAPI;
+            // string targetUri = "http://dudoWeb.iptime.org:50200/BCIOut";
             //string targetUri = "http://192.168.10.11:3002/BCIOut";    // 로컬
 
 
