@@ -10,9 +10,9 @@ namespace ChemicalX.Core
         public static EquipStatus Player1EquipStatus = EquipStatus.NULL;
         public static EquipStatus Player2EquipStatus = EquipStatus.NULL;
 
-        public static string brainReleaseAPI = "http://192.168.10.11:3002/BCIOut";  // Local brain api
+        public static string brainReleaseAPI = "http://192.168.50.11:3002/BCIOut";  // Local brain api
         // string targetUri = "http://dudoWeb.iptime.org:50200/BCIOut"; // 원격 brain api
-        public static string visionReleaseAPI = "http://192.168.10.11:3002/VISIONOUT"; // Local vision api
+        public static string visionReleaseAPI = "http://192.168.50.11:3002/VISIONOUT"; // Local vision api
         // public static string visionReleaseAPI = "http://dudoWeb.iptime.org:50200/VISIONOUT"  // 원격 vision api
 
         /// <summary>
